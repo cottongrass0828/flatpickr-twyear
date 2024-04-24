@@ -339,6 +339,7 @@ export interface ParsedOptions {
   time_24hr: boolean;
   weekNumbers: boolean;
   wrap: boolean;
+  year_tw: boolean;
 }
 
 export const defaults: ParsedOptions = {
@@ -421,4 +422,5 @@ export const defaults: ParsedOptions = {
   time_24hr: false,
   weekNumbers: false,
   wrap: false,
+  year_tw: false,
 };

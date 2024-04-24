@@ -1054,7 +1054,13 @@ function FlatpickrInstance(
       "div",
       "flatpickr-current-month"
     );
+
     currentMonth.appendChild(monthElement);
+    if (self.config.year_tw) {
+      let yearAttrElement = createElement<HTMLSpanElement>("span", "", "民國");
+      yearAttrElement.style.paddingLeft = "0.5ch";
+      currentMonth.appendChild(yearAttrElement);
+    }
     currentMonth.appendChild(yearInput);
 
     monthNavFragment.appendChild(currentMonth);
@@ -2793,8 +2799,11 @@ function FlatpickrInstance(
       } else {
         self.monthsDropdownContainer.value = d.getMonth().toString();
       }
-
-      yearElement.value = d.getFullYear().toString();
+      if (self.config.year_tw) {
+        yearElement.value = (d.getFullYear() - 1911).toString();
+      } else {
+        yearElement.value = d.getFullYear().toString();
+      }
     });
 
     self._hidePrevMonthArrow =
