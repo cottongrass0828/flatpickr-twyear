@@ -4,8 +4,8 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/flatpickr/flatpickr/master/LICENSE.md)
 
-![sample_en](https://raw.githubusercontent.com/cottongrass0828/flatpickr-twyear/70e0bdf4959219818b014082224d09e3b0137824/sample_en.png)
-![sample_zh-tw](https://raw.githubusercontent.com/cottongrass0828/flatpickr-twyear/70e0bdf4959219818b014082224d09e3b0137824/sample_zh-tw.png)
+![sample_en](https://github.com/cottongrass0828/flatpickr-twyear/assets/72060740/47f34d5f-5691-4e71-8a1f-3a48caed1194)
+![sample_zh-tw](https://github.com/cottongrass0828/flatpickr-twyear/assets/72060740/f215ffeb-f5bc-4d93-a66e-a15969e45a3a)
 
 ## Motivation
 
