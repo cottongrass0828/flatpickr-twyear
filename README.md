@@ -74,6 +74,7 @@ var fp = flatpickr(".date", {
 
 <zh-TW>
 第一步: 
+  
 ```html
   <link rel="stylesheet" href="./flatpickr.min.css">
   <script src="./flatpickr.min.js"></script>
