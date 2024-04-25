@@ -4,6 +4,9 @@
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/flatpickr/flatpickr/master/LICENSE.md)
 
+![sample_en](https://raw.githubusercontent.com/cottongrass0828/flatpickr-twyear/70e0bdf4959219818b014082224d09e3b0137824/sample_en.png)
+![sample_zh-tw](https://raw.githubusercontent.com/cottongrass0828/flatpickr-twyear/70e0bdf4959219818b014082224d09e3b0137824/sample_zh-tw.png)
+
 ## Motivation
 
 a forked and modify from [Flatpickr](https://flatpickr.js.org/)
