@@ -58,6 +58,7 @@ export const MandarinTraditional: CustomLocale = {
   monthAriaLabel: "月",
   hourAriaLabel: "時",
   minuteAriaLabel: "分",
+  ROC_era_name: "民國",
 };
 fp.l10ns.zh_tw = MandarinTraditional;
 export default fp.l10ns;

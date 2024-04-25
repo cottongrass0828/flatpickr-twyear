@@ -148,7 +148,7 @@ export const tokenRegex: TokenRegex = {
   u: "(.+)",
   w: "(\\d\\d|\\d)",
   y: "(\\d{2})",
-  t: "",
+  t: "(\\d\\d\\d|\\d\\d|\\d)",
 };
 
 export type Formats = Record<

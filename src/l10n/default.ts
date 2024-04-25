@@ -69,6 +69,7 @@ export const english: Locale = {
   hourAriaLabel: "Hour",
   minuteAriaLabel: "Minute",
   time_24hr: false,
+  ROC_era_name: "ROC",
 };
 
 export default english;

@@ -1057,7 +1057,11 @@ function FlatpickrInstance(
 
     currentMonth.appendChild(monthElement);
     if (self.config.year_tw) {
-      let yearAttrElement = createElement<HTMLSpanElement>("span", "", "民國");
+      let yearAttrElement = createElement<HTMLSpanElement>(
+        "span",
+        "",
+        self.l10n.ROC_era_name
+      );
       yearAttrElement.style.paddingLeft = "0.5ch";
       currentMonth.appendChild(yearAttrElement);
     }
@@ -2313,7 +2317,7 @@ function FlatpickrInstance(
 
     if (
       window.navigator.userAgent.indexOf("MSIE") !== -1 ||
-      navigator.msMaxTouchPoints !== undefined
+      navigator.maxTouchPoints !== undefined
     ) {
       // hack - bugs in the way IE handles focus keeps the calendar open
       setTimeout(self.close, 0);

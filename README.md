@@ -1,60 +1,119 @@
-## flatpickr - javascript datetime picker
-[![Actions Status](https://github.com/flatpickr/flatpickr/workflows/GitHub%20Actions/badge.svg)](https://github.com/flatpickr/flatpickr/actions)
+## flatpickr-twyear
 
-[![Coverage](https://coveralls.io/repos/github/chmln/flatpickr/badge.svg?branch=master)](https://coveralls.io/github/chmln/flatpickr)
-[![npm version](https://badge.fury.io/js/flatpickr.svg)](https://www.npmjs.com/package/flatpickr)
-[![CDNJS](https://img.shields.io/cdnjs/v/flatpickr.svg)](https://cdnjs.com/libraries/flatpickr)
+<!-- [![npm version](https://badge.fury.io/js/flatpickr.svg)](https://www.npmjs.com/package/flatpickr) -->
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/flatpickr/flatpickr/master/LICENSE.md)
 
-
-![blue](https://cloud.githubusercontent.com/assets/11352152/14549371/3cbb65da-028d-11e6-976d-a6f63f32061f.PNG)
-![green](https://cloud.githubusercontent.com/assets/11352152/14549373/3cbe975a-028d-11e6-9192-43975f0146da.PNG)
-![confetti](https://cloud.githubusercontent.com/assets/11352152/14549440/de9bf55e-028d-11e6-9271-46782a99efea.PNG)
-![red](https://cloud.githubusercontent.com/assets/11352152/14549374/3cc01102-028d-11e6-9ff4-0cf208a310c4.PNG)
-![default](https://cloud.githubusercontent.com/assets/11352152/14549370/3cadb750-028d-11e6-818d-c6a1bc6349fc.PNG)
-![dark](https://cloud.githubusercontent.com/assets/11352152/14549372/3cbc8514-028d-11e6-8daf-ec1ba01c9d7e.PNG)
-
-
 ## Motivation
-Almost every large SPA or project involves date and time input. Browser's native implementations of those are inconsistent and limited in functionality. Most other libraries require you to pull in heavy dependencies like jQuery, Bootstrap, and moment.js. I wanted something that was good-looking out of the box, dependency-free, powerful, and extensible.
 
-Feature overview:
+a forked and modify from [Flatpickr](https://flatpickr.js.org/)
 
-- Dependency-free (no bloated bundles)
-- Simple, polished UX
-- Date + time input
-- Range selections
-- Ability to select multiple dates
-- Can be used as just a time picker
-- Display dates in a human-friendly format
-- Easily disable specific dates, date ranges, or any date using arbitrary logic
-- Week numbers
-- 51 locales
-- 8 colorful themes (incl. dark and material)
-- Numerous plugins
-- Libraries available for React, Angular, Vue, Ember, and more
+Feature Overview:
 
-![](https://user-images.githubusercontent.com/11352152/36033089-f37dc1d0-0d7d-11e8-8ec4-c7a56d1ff92e.png)
+- Adds support for ROC (Republic of China) calendar
+- Uses 't' as the format character for ROC dates, e.g., t-m-d
 
-flatpickr provides more functionality at a fraction of the size of other libraries.
+---
+
+<zh-TW>
+
+一個從 Flatpickr 進行修改的分支
+
+功能概述：
+
+- 增加對民國年的支援
+- 使用 t 做為民國年的格式化字串, 如：t-m-d
+
+</zh-TW>
+
+## New Config Options
+
+| Config Option | Type    | Default | Description                                                     |
+| ------------- | ------- | ------- | --------------------------------------------------------------- |
+| year_tw       | Boolean | false   | Displays ROC era name and change year to ROC Year when enabled. |
+
+## New Date Formatting Tokens
+
+| Character | Description                                 | Example   |
+| --------- | ------------------------------------------- | --------- |
+| t         | A full numeric representation of a ROC year | 88 or 113 |
+
+## How to use
+
+First Step:
+
+```html
+<link rel="stylesheet" href="./flatpickr.min.css" />
+<script src="./flatpickr.min.js"></script>
+
+<!-- optional -->
+<script src="./l10n/zh_tw.js"></script>
+```
+
+Second Step:
+Default Locale - ROC Calendar:
+
+```javascript
+var fp = flatpickr(".date", {
+  year_tw: true,
+  dateFormat: "t-m-d",
+});
+```
+
+Traditional Chinese - ROC Calendar:
+
+```javascript
+var fp = flatpickr(".date", {
+  locale: "zh_tw",
+  year_tw: true,
+  dateFormat: "t-m-d",
+});
+```
+
+---
+
+<zh-TW>
+第一步: 
+```html
+  <link rel="stylesheet" href="./flatpickr.min.css">
+  <script src="./flatpickr.min.js"></script>
+
+  <!-- optional -->
+  <script src="./l10n/zh_tw.js"></script>
+
+````
+
+第二步:
+預設語系-民國年:
+```javascript
+var fp = flatpickr(".date", {
+  year_tw: true,
+  dateFormat: "t-m-d",
+});
+````
+
+繁體中文-民國年:
+```javascript
+var fp = flatpickr(".date", {
+  locale: "zh_tw",
+  year_tw: true,
+  dateFormat: "t-m-d",
+});
+```
+
+</zh-TW>
+
+---
+
+# flatpickr - javascript datetime picker
 
 ## Compatibility
+
 IE9 and up, Edge, iOS Safari 6+, Chrome 8+, Firefox 6+
 
 ## Install & Use
 
 Demos and documentation: https://flatpickr.js.org
-
-See also:
-* [angular2+-flatpickr addon](https://github.com/mezoistvan/ng2-flatpickr)
-* [angularJS-flatpickr addon](https://www.npmjs.com/package/angular-flatpickr)
-* [ember-flatpickr addon](https://www.npmjs.com/package/ember-flatpickr)
-* [Preact Component](https://github.com/molnarmark/preact-flatpickr)
-* [React Component](https://github.com/coderhaoxin/react-flatpickr)
-* [Stimulus.js Controller](https://github.com/adrienpoly/stimulus-flatpickr)
-* [Svelte Component](https://github.com/jacobmischka/svelte-flatpickr)
-* [vue-flatpickr component](https://github.com/ankurk91/vue-flatpickr-component)
-* [lit-flatpickr component](https://github.com/Matsuuu/lit-flatpickr)
 
 ## Supporting flatpickr
 
